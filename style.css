@@ -1,0 +1,109 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+    
+    #main {
+        width: 100%;
+        min-height: 100vh;
+        background-color: rgb(54, 170, 116);
+    }
+    
+    #main #panel {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        min-height: 50vh;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    #panel #top {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        min-height: 10vh;
+        background-color: rgb(31, 167, 13);
+    }
+    
+    #top .section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 15%;
+        min-height: inherit;
+        /* background-color: yellow; */
+    }
+    
+    .section #box {
+        padding: 20px 24px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    
+    #box {
+        font-size: 16px;
+    }
+    
+    #panel #bottom {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        width: 100%;
+        min-height: calc(100% - 15%);
+        /* background-color: red; */
+    }
+    
+    #bottom #bubble {
+        margin-left: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(24, 199, 18);
+        border-radius: 50%;
+    }
+    
+    @media(max-width: 500px) {
+        #main {
+            width: 90%;
+            min-height: 100vh;
+        }
+        #main #panel {
+            left: 45%;
+            height: 600px;
+            width: 290px;
+            border-radius: 0px;
+        }
+        #panel #top {
+            height: 50px !important;
+        }
+        .section h3 {
+            font-size: 16px;
+            margin-right: 5px;
+        }
+        .section #box {
+            padding: 5px;
+        }
+        #panel #bottom {
+            height: 90px;
+        }
+        #bottom #bubble {
+            margin-left: 4px;
+            margin-bottom: 10px;
+            height: 43px;
+            width: 43px;
+        }
+    }
